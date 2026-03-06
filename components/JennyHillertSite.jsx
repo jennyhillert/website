@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 
 const NAV_LINKS = ["Home", "About", "Videos", "Contact"];

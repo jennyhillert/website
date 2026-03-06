@@ -92,13 +92,15 @@ const pages = {
   Home: ({ setPage }) => (
     <div>
       {/* ── HERO ── */}
-      <div style={{
-        minHeight: "92vh", display: "flex", flexDirection: "column",
-        justifyContent: "flex-end", padding: "40px 24px",
-        position: "relative", overflow: "hidden",
-        backgroundImage: `url(${IMG_HERO})`,
-        backgroundSize: "cover", backgroundPosition: "center 30%"
-      }}>
+ <div style={{
+  minHeight: "92vh", display: "flex", flexDirection: "column",
+  justifyContent: "flex-end", padding: "40px 24px",
+  position: "relative", overflow: "hidden"
+}}>
+  <img src={IMG_HERO} alt="" style={{
+    position: "absolute", inset: 0, width: "100%", height: "100%",
+    objectFit: "cover", objectPosition: "center 30%", zIndex: 0
+  }} />
         <div style={{
           position: "absolute", inset: 0,
           background: "linear-gradient(to top, rgba(8,20,12,0.92) 0%, rgba(8,20,12,0.4) 55%, rgba(8,20,12,0.05) 100%)"

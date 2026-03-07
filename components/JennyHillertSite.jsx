@@ -400,7 +400,10 @@ export default function JennyHillertSite() {
           padding: isDesktop ? "18px 48px" : "16px 24px",
           maxWidth: "1200px", margin: "0 auto"
         }}>
-          <div style={{ fontSize: isDesktop ? "20px" : "17px", color: "#1a2e1e", fontWeight: 700 }}>Jenny Hillert</div>
+          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <img src="/favicon.svg" alt="JH" style={{ width: isDesktop ? "32px" : "28px", height: isDesktop ? "32px" : "28px" }} />
+            <span style={{ fontSize: isDesktop ? "20px" : "17px", color: "#1a2e1e", fontWeight: 700 }}>Jenny Hillert</span>
+          </div>
           <div style={{ display: "flex", gap: isDesktop ? "28px" : "16px" }}>
             {NAV_LINKS.map(link => (
               <button key={link} onClick={() => setActivePage(link)} style={{

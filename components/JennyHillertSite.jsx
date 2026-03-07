@@ -23,12 +23,12 @@ const IMG_TRAINING = "/images/training.png";
 
 // SWAP these VIDEO IDs with real ones from https://www.youtube.com/@jennyhillert5655
 const VIDEOS = [
-  { id: "VIDEO_ID_1", title: "IEA Nationals 2024", tag: "IEA" },
-  { id: "VIDEO_ID_2", title: "CTHJA — 2'6\" Hunter Round", tag: "Competition" },
-  { id: "VIDEO_ID_3", title: "Siddie Flat Work", tag: "Training" },
-  { id: "VIDEO_ID_4", title: "IEA Unknown Horse Draw", tag: "IEA" },
-  { id: "VIDEO_ID_5", title: "Equitation Pattern", tag: "Competition" },
-  { id: "VIDEO_ID_6", title: "Morning Warm-Up at Idylwood", tag: "Training" },
+  { id: "c4oKDuG8Wts", title: "Reserve Champion ETS Medal — 35th Annual Tournament", tag: "Competition" },
+  { id: "Dfj894f0zYc", title: "Equestrian Skills Compilation", tag: "Training" },
+  { id: "ldL7F_Shclo", title: "Winning 2'3\" Hunter Round on Spoken For", tag: "Competition" },
+  { id: "vXDkOcricB8", title: "Winning IEA Cross-rails Equitation O/F", tag: "IEA" },
+  { id: "lrDpzIl9bFM", title: "Winning IEA Cross-rails Equitation O/F Round", tag: "IEA" },
+  { id: "GQiU7MzdU_M", title: "Winning Beginner Equitation Round — CTHJA Circuit", tag: "Competition" },
 ];
 
 function VideoModal({ videoId, onClose }) {

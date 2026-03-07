@@ -4,12 +4,13 @@
   <!-- JH monogram in cream -->
   <text
     x="50"
-    y="67"
+    y="50"
     font-family="Georgia, serif"
     font-size="42"
     font-weight="700"
     fill="#f5f2ed"
     text-anchor="middle"
+    dominant-baseline="central"
     letter-spacing="-2"
   >JH</text>
 </svg>

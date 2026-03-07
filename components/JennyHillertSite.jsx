@@ -400,7 +400,7 @@ export default function JennyHillertSite() {
           padding: isDesktop ? "18px 48px" : "16px 24px",
           maxWidth: "1200px", margin: "0 auto"
         }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          <div onClick={() => setActivePage("Home")} style={{ display: "flex", alignItems: "center", gap: "10px", cursor: "pointer" }}>
             <img src="/favicon.svg" alt="JH" style={{ width: isDesktop ? "32px" : "28px", height: isDesktop ? "32px" : "28px" }} />
             <span style={{ fontSize: isDesktop ? "20px" : "17px", color: "#1a2e1e", fontWeight: 700 }}>Jenny Hillert</span>
           </div>

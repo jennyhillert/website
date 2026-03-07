@@ -147,24 +147,26 @@ const pages = {
       </div>
 
       {/* ── STATS ── */}
-      <div style={{
-        background: "#1a3a2a", display: "grid",
-        gridTemplateColumns: "repeat(4, 1fr)", gap: "1px", backgroundColor: "#2a5a3a",
-        maxWidth: "1200px", margin: "0 auto"
-      }}>
-        {[
-          { num: "2021", label: "First Show" },
-          { num: "2'6\"", label: "Hunter & Eq" },
-          { num: "IEA", label: "Nationals '24" },
-          { num: "3–4x", label: "Per Week" }
-        ].map(stat => (
-          <div key={stat.label} style={{
-            background: "#1a3a2a", padding: isDesktop ? "28px 12px" : "20px 8px", textAlign: "center", color: "#fff"
-          }}>
-            <div style={{ fontSize: isDesktop ? "26px" : "20px", fontWeight: 700 }}>{stat.num}</div>
-            <div style={{ fontSize: isDesktop ? "11px" : "10px", letterSpacing: "0.1em", textTransform: "uppercase", color: "#8aaa8e", marginTop: "3px" }}>{stat.label}</div>
-          </div>
-        ))}
+      <div style={{ background: "#1a3a2a" }}>
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(4, 1fr)", gap: "1px", backgroundColor: "#2a5a3a",
+          maxWidth: "1200px", margin: "0 auto"
+        }}>
+          {[
+            { num: "2021", label: "First Show" },
+            { num: "2'6\"", label: "Hunter & Eq" },
+            { num: "IEA", label: "Nationals '24" },
+            { num: "3–4x", label: "Per Week" }
+          ].map(stat => (
+            <div key={stat.label} style={{
+              background: "#1a3a2a", padding: isDesktop ? "28px 12px" : "20px 8px", textAlign: "center", color: "#fff"
+            }}>
+              <div style={{ fontSize: isDesktop ? "26px" : "20px", fontWeight: 700 }}>{stat.num}</div>
+              <div style={{ fontSize: isDesktop ? "11px" : "10px", letterSpacing: "0.1em", textTransform: "uppercase", color: "#8aaa8e", marginTop: "3px" }}>{stat.label}</div>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* ── PHOTO FEATURE ── */}
@@ -177,7 +179,8 @@ const pages = {
       </div>
 
       {/* ── HIGHLIGHTS ── */}
-      <div style={{ padding: isDesktop ? "64px 48px" : "48px 24px", background: "#f5f2ed", maxWidth: "1200px", margin: "0 auto" }}>
+      <div style={{ background: "#f5f2ed" }}>
+      <div style={{ padding: isDesktop ? "64px 48px" : "48px 24px", maxWidth: "1200px", margin: "0 auto" }}>
         <p style={{ fontSize: "11px", letterSpacing: "0.25em", color: "#5a7a5e", textTransform: "uppercase", marginBottom: "10px", fontWeight: 600 }}>Highlights</p>
         <h2 style={{ fontSize: isDesktop ? "32px" : "26px", color: "#1a2e1e", fontWeight: 700, marginBottom: "24px" }}>Competitions & Milestones</h2>
         <div style={{ display: "grid", gridTemplateColumns: isDesktop ? "repeat(3, 1fr)" : "1fr", gap: isDesktop ? "20px" : "12px" }}>
@@ -205,6 +208,7 @@ const pages = {
             </div>
           ))}
         </div>
+      </div>
       </div>
 
       {/* ── EXPLORE ── */}
@@ -295,7 +299,8 @@ const pages = {
     const filters = ["All", "IEA", "Competition", "Training"];
     const filtered = filter === "All" ? VIDEOS : VIDEOS.filter(v => v.tag === filter);
     return (
-      <div style={{ padding: isDesktop ? "64px 48px" : "48px 24px", background: "#f5f2ed", minHeight: "100vh", maxWidth: "1200px", margin: "0 auto" }}>
+      <div style={{ background: "#f5f2ed", minHeight: "100vh" }}>
+      <div style={{ padding: isDesktop ? "64px 48px" : "48px 24px", maxWidth: "1200px", margin: "0 auto" }}>
         {activeVideo && <VideoModal videoId={activeVideo} onClose={() => setActiveVideo(null)} />}
         <p style={{ fontSize: "11px", letterSpacing: "0.25em", color: "#5a7a5e", textTransform: "uppercase", marginBottom: "10px", fontWeight: 600 }}>Archive</p>
         <h2 style={{ fontSize: isDesktop ? "36px" : "32px", color: "#1a2e1e", fontWeight: 700, marginBottom: "6px" }}>Videos</h2>
@@ -317,11 +322,13 @@ const pages = {
           {filtered.map(v => <VideoCard key={v.id} video={v} onPlay={setActiveVideo} />)}
         </div>
       </div>
+      </div>
     );
   },
 
   Contact: ({ isDesktop }) => (
-    <div style={{ padding: isDesktop ? "64px 48px" : "48px 24px", background: "#f5f2ed", minHeight: "100vh", maxWidth: "760px", margin: "0 auto" }}>
+    <div style={{ background: "#f5f2ed", minHeight: "100vh" }}>
+    <div style={{ padding: isDesktop ? "64px 48px" : "48px 24px", maxWidth: "760px", margin: "0 auto" }}>
       {/* Contact header photo */}
       <div style={{ position: "relative", height: isDesktop ? "280px" : "180px", overflow: "hidden", borderRadius: "4px", marginBottom: "32px" }}>
         <img src={IMG_COMP} alt="Jenny competing" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 30%" }} />
@@ -370,6 +377,7 @@ const pages = {
         <p style={{ fontSize: "14px", color: "#888" }}>YouTube: <a href="https://www.youtube.com/@jennyhillert5655" target="_blank" rel="noreferrer" style={{ color: "#1a3a2a", fontWeight: 600, textDecoration: "none" }}>@jennyhillert5655</a></p>
       </div>
     </div>
+    </div>
   )
 };
 
@@ -384,34 +392,40 @@ export default function JennyHillertSite() {
     }}>
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
       <nav style={{
-        display: "flex", alignItems: "center", justifyContent: "space-between",
-        padding: isDesktop ? "18px 48px" : "16px 24px", background: "#f5f2ed",
+        background: "#f5f2ed",
         borderBottom: "1px solid #e0d8cc", position: "sticky", top: 0, zIndex: 100,
-        maxWidth: "1200px", margin: "0 auto"
       }}>
-        <div style={{ fontSize: isDesktop ? "20px" : "17px", color: "#1a2e1e", fontWeight: 700 }}>Jenny Hillert</div>
-        <div style={{ display: "flex", gap: isDesktop ? "28px" : "16px" }}>
-          {NAV_LINKS.map(link => (
-            <button key={link} onClick={() => setActivePage(link)} style={{
-              background: "none", border: "none", cursor: "pointer",
-              fontSize: isDesktop ? "14px" : "13px", fontWeight: activePage === link ? 600 : 400,
-              color: activePage === link ? "#1a3a2a" : "#888",
-              borderBottom: activePage === link ? "2px solid #1a3a2a" : "2px solid transparent",
-              padding: "0 0 2px 0"
-            }}>{link}</button>
-          ))}
+        <div style={{
+          display: "flex", alignItems: "center", justifyContent: "space-between",
+          padding: isDesktop ? "18px 48px" : "16px 24px",
+          maxWidth: "1200px", margin: "0 auto"
+        }}>
+          <div style={{ fontSize: isDesktop ? "20px" : "17px", color: "#1a2e1e", fontWeight: 700 }}>Jenny Hillert</div>
+          <div style={{ display: "flex", gap: isDesktop ? "28px" : "16px" }}>
+            {NAV_LINKS.map(link => (
+              <button key={link} onClick={() => setActivePage(link)} style={{
+                background: "none", border: "none", cursor: "pointer",
+                fontSize: isDesktop ? "14px" : "13px", fontWeight: activePage === link ? 600 : 400,
+                color: activePage === link ? "#1a3a2a" : "#888",
+                borderBottom: activePage === link ? "2px solid #1a3a2a" : "2px solid transparent",
+                padding: "0 0 2px 0"
+              }}>{link}</button>
+            ))}
+          </div>
         </div>
       </nav>
       <PageContent setPage={setActivePage} isDesktop={isDesktop} />
-      <footer style={{
-        background: "#1a3a2a", padding: isDesktop ? "32px 48px" : "28px 24px",
-        display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px",
-        maxWidth: "1200px", margin: "0 auto"
-      }}>
-        <span style={{ fontSize: "15px", color: "#fff", fontWeight: 600 }}>Jenny Hillert</span>
-        <div style={{ display: "flex", gap: "16px", fontSize: "13px" }}>
-          <a href="https://instagram.com/jennyhillert_eq_" target="_blank" rel="noreferrer" style={{ color: "#8aaa8e", textDecoration: "none" }}>Instagram</a>
-          <a href="https://www.youtube.com/@jennyhillert5655" target="_blank" rel="noreferrer" style={{ color: "#8aaa8e", textDecoration: "none" }}>YouTube</a>
+      <footer style={{ background: "#1a3a2a" }}>
+        <div style={{
+          padding: isDesktop ? "32px 48px" : "28px 24px",
+          display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px",
+          maxWidth: "1200px", margin: "0 auto"
+        }}>
+          <span style={{ fontSize: "15px", color: "#fff", fontWeight: 600 }}>Jenny Hillert</span>
+          <div style={{ display: "flex", gap: "16px", fontSize: "13px" }}>
+            <a href="https://instagram.com/jennyhillert_eq_" target="_blank" rel="noreferrer" style={{ color: "#8aaa8e", textDecoration: "none" }}>Instagram</a>
+            <a href="https://www.youtube.com/@jennyhillert5655" target="_blank" rel="noreferrer" style={{ color: "#8aaa8e", textDecoration: "none" }}>YouTube</a>
+          </div>
         </div>
       </footer>
     </div>

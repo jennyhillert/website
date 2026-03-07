@@ -19,14 +19,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://website-gamma-ten-93.vercel.app"),
   openGraph: {
     title: "Jenny Hillert",
-    description: "Equestrian — Austin, TX",
-    images: [{ url: "/images/hero.jpg", width: 1200, height: 630 }],
+    description: "Hunter · Equitation · IEA",
   },
   twitter: {
     card: "summary_large_image",
     title: "Jenny Hillert",
-    description: "Equestrian — Austin, TX",
-    images: ["/images/hero.jpg"],
+    description: "Hunter · Equitation · IEA",
   },
 };
 

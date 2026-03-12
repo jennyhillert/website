@@ -155,7 +155,7 @@ const pages = {
         }}>
           {[
             { num: "2021", label: "First Show" },
-            { num: "2'6\"", label: "Hunter & Eq" },
+            { num: "2'9\"", label: "Hunter & Eq" },
             { num: "IEA", label: "Nationals '24" },
             { num: "3–4x", label: "Per Week" }
           ].map(stat => (
@@ -183,11 +183,12 @@ const pages = {
       <div style={{ padding: isDesktop ? "64px 48px" : "48px 24px", maxWidth: "1200px", margin: "0 auto" }}>
         <p style={{ fontSize: "11px", letterSpacing: "0.25em", color: "#5a7a5e", textTransform: "uppercase", marginBottom: "10px", fontWeight: 600 }}>Highlights</p>
         <h2 style={{ fontSize: isDesktop ? "32px" : "26px", color: "#1a2e1e", fontWeight: 700, marginBottom: "24px" }}>Competitions & Milestones</h2>
-        <div style={{ display: "grid", gridTemplateColumns: isDesktop ? "repeat(3, 1fr)" : "1fr", gap: isDesktop ? "20px" : "12px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: isDesktop ? "repeat(2, 1fr)" : "1fr", gap: isDesktop ? "20px" : "12px" }}>
           {[
             { title: "IEA Nationals 2024", desc: "Represented Austin on the national stage with her team.", tag: "IEA", img: IMG_JUMP2 },
             { title: "IEA Regionals 2025", desc: "Individually qualified — aiming for zones and nationals.", tag: "IEA", img: IMG_TRAINING },
-            { title: "CTHJA Shows", desc: "Regular competitor at 2'6\" open hunters and equitation.", tag: "CTHJA", img: IMG_COMP }
+            { title: "Reserve Champion — ETS Medal", desc: "Reserve Champion in the ETS Medal at the 35th Annual Tournament of Champions.", tag: "CTHJA", img: IMG_COMP },
+            { title: "CTHJA Shows", desc: "Regular competitor at 2'9\" hunters and equitation.", tag: "CTHJA", img: IMG_COMP }
           ].map(card => (
             <div key={card.title} style={{
               background: "#fff", borderRadius: "4px", overflow: "hidden",
@@ -263,10 +264,10 @@ const pages = {
           "Jenny has always had a love for horses — and every ride is a chance to grow."
         </blockquote>
         <p style={{ fontSize: isDesktop ? "16px" : "15px", lineHeight: 1.8, color: "#555", marginBottom: "20px" }}>
-          Jenny is a 10th grader at <strong style={{ color: "#1a2e1e" }}>St. Michael's Catholic Preparatory School</strong> in Austin, Texas. She started riding at age 8 and began training consistently in 2021. Her first competition was September 2022 — cross rails — and she's been progressing ever since, now competing at 2'6" hunters and equitation.
+          Jenny is a 10th grader at <strong style={{ color: "#1a2e1e" }}>St. Michael's Catholic Preparatory School</strong> in Austin, Texas. She started riding at age 8 and began training consistently in 2021. Her first competition was September 2022 — cross rails — and she's been progressing ever since, now competing at 2'9" hunters and equitation.
         </p>
         <p style={{ fontSize: isDesktop ? "16px" : "15px", lineHeight: 1.8, color: "#555", marginBottom: "20px" }}>
-          Jenny trains 3–4 times a week at <strong style={{ color: "#1a2e1e" }}>Idylwood Stables</strong>, where she rides her horse Siddie and often arrives early to ride unknown horses — a habit she believes sharpens her skills for competition.
+          Jenny trains 3–4 times a week at <strong style={{ color: "#1a2e1e" }}>Idylwood Stables</strong>, where she rides her horse Siddie and practices with their other horse, Merk. She also often arrives early to ride unknown horses — a habit she believes sharpens her skills for competition.
         </p>
 
         {/* Inline photo - IEA training shot */}
@@ -278,10 +279,10 @@ const pages = {
         </div>
 
         <p style={{ fontSize: isDesktop ? "16px" : "15px", lineHeight: 1.8, color: "#555", marginBottom: "32px" }}>
-          She competes with <strong style={{ color: "#1a2e1e" }}>CTHJA</strong> locally and is a member of <strong style={{ color: "#1a2e1e" }}>IEA</strong>, where riders compete on unknown horses. Jenny represented her team at IEA Nationals in 2024 and is individually heading to regionals in 2025, with her sights set on zones and nationals.
+          She competes with <strong style={{ color: "#1a2e1e" }}>CTHJA</strong> locally at 2'9" and is a member of <strong style={{ color: "#1a2e1e" }}>IEA</strong>, where she rides in the 2'6" open division on unknown horses. Jenny represented her team at IEA Nationals in 2024 and is individually heading to regionals in 2025, with her sights set on zones and nationals.
         </p>
         <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
-          {["2'6\" Hunters", "Equitation", "CTHJA", "IEA", "Idylwood Stables"].map(tag => (
+          {["2'9\" Hunters", "Equitation", "CTHJA", "IEA", "Idylwood Stables"].map(tag => (
             <span key={tag} style={{
               border: "1px solid #5a7a5e", color: "#1a3a2a",
               fontSize: "11px", letterSpacing: "0.12em", textTransform: "uppercase",

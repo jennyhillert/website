@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 function useIsDesktop(breakpoint = 768) {
   const [isDesktop, setIsDesktop] = useState(false);
@@ -14,6 +14,37 @@ function useIsDesktop(breakpoint = 768) {
 }
 
 const NAV_LINKS = ["Home", "About", "Videos", "Contact"];
+
+const STRIP_IMAGES = ["/images/hero2.jpeg", "/images/comp22.jpeg", "/images/jump12.JPG", "/images/jump23.jpeg", "/images/training2.jpeg"];
+
+function PhotoStrip() {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    let animationId;
+    let scrollPos = 0;
+    const speed = 0.5;
+    const tick = () => {
+      scrollPos += speed;
+      if (scrollPos >= el.scrollWidth / 2) scrollPos = 0;
+      el.scrollLeft = scrollPos;
+      animationId = requestAnimationFrame(tick);
+    };
+    animationId = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(animationId);
+  }, []);
+
+  return (
+    <div ref={containerRef} style={{ display: "flex", overflowX: "auto", width: "100%", scrollbarWidth: "none", msOverflowStyle: "none" }}>
+      <style>{`div::-webkit-scrollbar { display: none; }`}</style>
+      {[...STRIP_IMAGES, ...STRIP_IMAGES].map((src, i) => (
+        <img key={i} src={src} alt="" style={{ width: "280px", height: "380px", objectFit: "cover", objectPosition: "center", flexShrink: 0, display: "block" }} />
+      ))}
+    </div>
+  );
+}
 
 const IMG_HERO = "/images/hero.jpg";
 const IMG_JUMP1 = "/images/jump1.jpg";
@@ -146,6 +177,9 @@ const pages = {
         </div>
       </div>
 
+      {/* ── PHOTO STRIP ── */}
+      <PhotoStrip />
+
       {/* ── STATS ── */}
       <div style={{ background: "#1a3a2a" }}>
         <div style={{
@@ -167,13 +201,6 @@ const pages = {
             </div>
           ))}
         </div>
-      </div>
-
-      {/* ── PHOTO STRIP ── */}
-      <div style={{ display: "flex", overflowX: "auto", width: "100%" }}>
-        {["/images/hero2.jpeg", "/images/comp22.jpeg", "/images/jump12.JPG", "/images/jump23.jpeg", "/images/training2.jpeg"].map(src => (
-          <img key={src} src={src} alt="" style={{ width: "280px", height: "380px", objectFit: "cover", objectPosition: "center", flexShrink: 0, display: "block" }} />
-        ))}
       </div>
 
       {/* ── PHOTO FEATURE ── */}

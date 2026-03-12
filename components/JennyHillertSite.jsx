@@ -160,7 +160,7 @@ const pages = {
           }}>Jenny<br />Hillert</h1>
           <div style={{ width: "40px", height: "2px", background: "rgba(255,255,255,0.4)", marginBottom: "18px" }} />
           <p style={{ fontSize: isDesktop ? "17px" : "15px", lineHeight: 1.65, color: "rgba(255,255,255,0.72)", maxWidth: isDesktop ? "480px" : "320px", marginBottom: "32px" }}>
-            10th grade equestrian in Austin, TX — competing in CTHJA and IEA, riding with heart every day.
+            11th grade equestrian in Austin, TX — competing in CTHJA and IEA, riding with heart every day.
           </p>
           <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
             <button onClick={() => setPage("Videos")} style={{
@@ -298,7 +298,7 @@ const pages = {
           "Jenny has always had a love for horses — and every ride is a chance to grow."
         </blockquote>
         <p style={{ fontSize: isDesktop ? "16px" : "15px", lineHeight: 1.8, color: "#555", marginBottom: "20px" }}>
-          Jenny is a 10th grader at <strong style={{ color: "#1a2e1e" }}>St. Michael's Catholic Preparatory School</strong> in Austin, Texas. She started riding at age 8 and began training consistently in 2021. Her first competition was September 2022 — cross rails — and she's been progressing ever since, now competing at 2'9" hunters and equitation.
+          Jenny is a 11th grader at <strong style={{ color: "#1a2e1e" }}>St. Michael's Catholic Preparatory School</strong> in Austin, Texas. She started riding at age 8 and began training consistently in 2021. Her first competition was September 2022 — cross rails — and she's been progressing ever since, now competing at 2'9" hunters and equitation.
         </p>
         <p style={{ fontSize: isDesktop ? "16px" : "15px", lineHeight: 1.8, color: "#555", marginBottom: "20px" }}>
           Jenny trains 3–4 times a week at <strong style={{ color: "#1a2e1e" }}>Idylwood Stables</strong>, where she rides her horse Siddie and practices with their other horse, Merk. She also often arrives early to ride unknown horses — a habit she believes sharpens her skills for competition.

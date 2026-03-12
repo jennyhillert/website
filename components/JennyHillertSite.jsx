@@ -169,6 +169,13 @@ const pages = {
         </div>
       </div>
 
+      {/* ── PHOTO STRIP ── */}
+      <div style={{ display: "flex", overflowX: "auto", width: "100%" }}>
+        {["/images/hero2.jpeg", "/images/comp22.jpeg", "/images/jump12.JPG", "/images/jump23.jpeg", "/images/training2.jpeg"].map(src => (
+          <img key={src} src={src} alt="" style={{ width: "280px", height: "380px", objectFit: "cover", objectPosition: "center", flexShrink: 0, display: "block" }} />
+        ))}
+      </div>
+
       {/* ── PHOTO FEATURE ── */}
       <div style={{ position: "relative", height: isDesktop ? "420px" : "260px", overflow: "hidden" }}>
         <img src={IMG_JUMP1} alt="Jenny jumping" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 20%" }} />

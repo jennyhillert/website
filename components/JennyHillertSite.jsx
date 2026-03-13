@@ -51,6 +51,7 @@ const IMG_JUMP1 = "/images/jump1.jpg";
 const IMG_JUMP2 = "/images/jump2.jpg";
 const IMG_COMP = "/images/comp.jpg";
 const IMG_TRAINING = "/images/training.png";
+const IMG_SHOW = "/images/show.jpg";
 
 // SWAP these VIDEO IDs with real ones from https://www.youtube.com/@jennyhillert5655
 const VIDEOS = [
@@ -222,7 +223,7 @@ const pages = {
             { title: "IEA Nationals 2024", desc: "Represented Austin on the national stage with her team.", tag: "IEA", img: IMG_JUMP2 },
             { title: "IEA Regionals 2025", desc: "Individually qualified — aiming for zones and nationals.", tag: "IEA", img: IMG_TRAINING },
             { title: "Reserve Champion — ETS Medal", desc: "Reserve Champion in the ETS Medal at the 35th Annual Tournament of Champions.", tag: "CTHJA", img: IMG_COMP },
-            { title: "CTHJA Shows", desc: "Regular competitor at 2'9\" hunters and equitation.", tag: "CTHJA", img: IMG_COMP }
+            { title: "CTHJA Shows", desc: "Regular competitor at 2'9\" hunters and equitation.", tag: "CTHJA", img: IMG_SHOW }
           ].map(card => (
             <div key={card.title} style={{
               background: "#fff", borderRadius: "4px", overflow: "hidden",

@@ -221,7 +221,7 @@ const pages = {
         <div style={{ display: "grid", gridTemplateColumns: isDesktop ? "repeat(2, 1fr)" : "1fr", gap: isDesktop ? "20px" : "12px" }}>
           {[
             { title: "IEA Nationals 2024", desc: "Represented Austin on the national stage with her team.", tag: "IEA", img: IMG_JUMP2 },
-            { title: "IEA Zones, 2025 & 2026", desc: "Individually qualified — aiming for zones and nationals.", tag: "IEA", img: IMG_TRAINING },
+            { title: "IEA Zones, 2025 & 2026", desc: "Individual zones qualifier - aiming for nationals.", tag: "IEA", img: IMG_TRAINING },
             { title: "Reserve Champion — ETS Medal", desc: "Reserve Champion in the ETS Medal at the 35th Annual Tournament of Champions.", tag: "ETS", img: IMG_COMP },
             { title: "CTHJA Shows", desc: "Regular competitor at 2'9\" hunters and equitation.", tag: "CTHJA", img: IMG_SHOW }
           ].map(card => (
